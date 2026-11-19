@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101a21" />
+  <meta name="description" content="《神狐天尊》全本完結：一隻野心勃勃的狐狸與小師妹草蝦，從禁忌私情到合謀誣陷，一步步登上仙門長老之位，最後卻被自己編造的真相反噬。" />
+  <title>神狐天尊｜全本完結・仙俠權謀小說</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0c151c; --paper: #14222a; --paper-2: #182a32; --ink: #e8e6dd;
+      --muted: #a5ada9; --dim: #778887; --gold: #d8b876; --gold-soft:#a99161;
+      --teal:#83ada9; --line: rgba(220,200,162,.19); --shadow: rgba(0,0,0,.28);
+      --story-font: 19px;
+    }
+    :root[data-theme="light"] {
+      color-scheme: light;
+      --bg: #f4f0e6; --paper: #fcf9f1; --paper-2: #eee9dd; --ink:#2e3331;
+      --muted:#626b66; --dim:#798079; --gold:#91672f; --gold-soft:#ac8652;
+      --teal:#486b66; --line:rgba(98,82,57,.18); --shadow:rgba(64,49,35,.08);
+    }
+    *,*::before,*::after {box-sizing:border-box}
+    html {scroll-behavior:smooth;scroll-padding-top:90px}
+    body {margin:0; background:var(--bg); color:var(--ink);font-family:"Noto Serif TC","Songti TC","STSong","PMingLiU",serif;transition:background .25s,color .25s}
+    body::before {content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.22;background-image:radial-gradient(circle at 20% 10%,rgba(105,159,156,.2),transparent 28%),radial-gradient(circle at 84% 33%,rgba(178,139,71,.08),transparent 29%)}
+    button,a { -webkit-tap-highlight-color:transparent }
+    button {font:inherit;cursor:pointer}
+    a {color:inherit}
+    a:focus-visible,button:focus-visible {outline:2px solid var(--gold);outline-offset:4px}
+    .topline {height:3px;background:linear-gradient(90deg,transparent,var(--gold),var(--teal),transparent)}
+    .topbar {height:64px;padding:0 clamp(18px,4vw,55px);display:flex;align-items:center;justify-content:space-between;gap:14px;position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .brand {display:flex;gap:12px;align-items:center;text-decoration:none;white-space:nowrap}
+    .brandmark {width:29px;height:29px;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-size:19px;transform:rotate(45deg)}
+    .brandmark span {transform:rotate(-45deg)}
+    .brandtxt {letter-spacing:.17em;font-weight:700;font-size:14px}
+    .navtools {display:flex;align-items:center;gap:7px}
+    .tool {min-width:34px;height:34px;padding:0 10px;background:transparent;color:var(--muted);border:1px solid transparent;border-radius:4px;font-family:system-ui,"PingFang TC",sans-serif;font-size:13px}
+    .tool:hover,.tool[aria-pressed="true"] {border-color:var(--line);color:var(--gold);background:var(--paper)}
+    .separator {height:19px;border-left:1px solid var(--line);margin:0 3px}
+    .progress {height:2px;position:fixed;top:64px;left:0;right:0;z-index:45;background:transparent;pointer-events:none}
+    .progress-inner {height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--gold));transition:width .14s linear}
+    .hero {position:relative;isolation:isolate;min-height:560px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;padding:70px 22px 90px;background:radial-gradient(ellipse 60% 55% at 50% 42%,rgba(35,73,76,.4),transparent 75%),linear-gradient(180deg,#101d25 0%,#172a31 64%,#14232a 100%);color:#ede8db}
+    :root[data-theme="light"] .hero {background:radial-gradient(ellipse 60% 55% at 50% 40%,rgba(122,146,140,.4),transparent 76%),linear-gradient(180deg,#253943 0%,#516968 100%)}
+    .hero:before {content:"";position:absolute;inset:0;z-index:-1;opacity:.38;background-image:radial-gradient(#e9d8b1 0.8px,transparent 1px),radial-gradient(#d1dace 0.8px,transparent 1px);background-size:127px 113px,173px 151px;background-position:20px 8px,82px 55px}
+    .moon {position:absolute;z-index:-1;top:62px;left:50%;transform:translateX(-50%);height:290px;width:290px;border-radius:50%;background:radial-gradient(circle at 45% 42%,#d7d7c0 0%,#b2baaa 55%,#80938e 85%,rgba(135,158,148,.0) 100%);box-shadow:0 0 120px rgba(169,191,176,.20),0 0 50px rgba(169,191,176,.13);opacity:.21}
+    .mountain {position:absolute;left:-4%;right:-4%;bottom:-1px;height:160px;z-index:-1;clip-path:polygon(0 82%,8% 65%,16% 82%,25% 45%,31% 60%,41% 20%,49% 54%,59% 26%,68% 58%,78% 38%,89% 73%,100% 46%,100% 100%,0 100%);background:#0b171e;opacity:.77}
+    .mountain.two {height:135px;bottom:0;opacity:.65;clip-path:polygon(0 54%,11% 80%,22% 55%,34% 91%,47% 56%,58% 86%,70% 42%,81% 77%,91% 50%,100% 70%,100% 100%,0 100%);background:#183039}
+    .hero-content {position:relative;max-width:850px;z-index:1}
+    .eyebrow {color:#d4bf8d;letter-spacing:.35em;font-size:12px;font-family:system-ui,"PingFang TC",sans-serif;display:inline-flex;align-items:center;gap:12px}
+    .eyebrow:before,.eyebrow:after {content:"";width:40px;height:1px;background:#b89a62;opacity:.8}
+    h1 {font-size:clamp(60px,10vw,118px);line-height:1.2;font-weight:600;letter-spacing:.17em;margin:30px -0.17em 20px 0;text-shadow:0 10px 45px rgba(0,0,0,.3)}
+    .hero-sub {font-size:clamp(17px,2.6vw,24px);letter-spacing:.26em;color:#d9cdaa;margin:0 0 28px}
+    .hero-blurb {font-size:15px;max-width:565px;line-height:2.05;color:#c6d3ce;margin:0 auto 32px;letter-spacing:.07em}
+    .hero-tags {display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+    .hero-tags span {border:1px solid rgba(213,194,151,.35);border-radius:50px;padding:7px 14px;font:11px system-ui,"PingFang TC",sans-serif;letter-spacing:.1em;color:#d6cab4;background:rgba(4,17,22,.17)}
+    .start {display:inline-block;text-decoration:none;background:#d6bc87;color:#1a2628;padding:13px 33px;font-size:14px;font-weight:700;letter-spacing:.17em;border-radius:2px;box-shadow:0 8px 30px rgba(0,0,0,.22);transition:transform .2s,background .2s}
+    .start:hover {transform:translateY(-2px);background:#f1d6a1}
+    .edition {margin-top:20px;color:#a1b2ac;font:12px system-ui,"PingFang TC",sans-serif;letter-spacing:.12em}
+    .main-layout {max-width:1260px;padding:65px clamp(16px,3vw,38px) 100px;margin:auto;display:grid;grid-template-columns:230px minmax(0,780px);column-gap:clamp(30px,6vw,91px);justify-content:center;align-items:start}
+    .sidebar {position:sticky;top:102px;align-self:start;max-height:calc(100vh - 125px);overflow:auto;padding-bottom:22px;scrollbar-width:thin}
+    .side-title {font:600 12px system-ui,"PingFang TC",sans-serif;letter-spacing:.24em;color:var(--gold);margin:4px 0 20px}
+    .toc {display:grid;gap:3px;border-left:1px solid var(--line)}
+    .toc a {display:block;text-decoration:none;padding:10px 7px 10px 17px;line-height:1.5;color:var(--muted);font-size:13px;letter-spacing:.06em;border-left:2px solid transparent;margin-left:-1px;transition:color .15s,background .15s}
+    .toc a:hover,.toc a.active {border-left-color:var(--gold);color:var(--gold);background:linear-gradient(90deg,color-mix(in srgb,var(--gold) 8%,transparent),transparent)}
+    .side-foot {margin-top:25px;border-top:1px solid var(--line);padding:20px 5px 0;color:var(--dim);font:12px/1.9 system-ui,"PingFang TC",sans-serif}
+    .book {min-width:0}
+    .opening {border-bottom:1px solid var(--line);padding:3px 0 54px;margin-bottom:45px;text-align:center}
+    .quote-flower {font-size:24px;color:var(--gold);margin-bottom:17px;opacity:.8}
+    .opening blockquote {font-size:clamp(20px,2.6vw,27px);line-height:1.9;letter-spacing:.16em;margin:0;font-weight:500}
+    .opening .byline {color:var(--dim);margin-top:20px;font:12px system-ui,"PingFang TC",sans-serif;letter-spacing:.18em}
+    .chapter {padding:8px 0 55px;margin-bottom:50px;border-bottom:1px solid var(--line);scroll-margin-top:99px}
+    .chapter:last-of-type {border-bottom:0;margin-bottom:10px}
+    .chapter-num {display:flex;align-items:center;gap:18px;color:var(--gold);font:600 11px system-ui,"PingFang TC",sans-serif;letter-spacing:.24em;margin:0 0 17px}
+    .chapter-num::after {content:"";width:56px;height:1px;background:var(--line)}
+    h2 {font-size:clamp(29px,4.2vw,41px);font-weight:600;line-height:1.4;letter-spacing:.13em;margin:0 0 34px}
+    .prose {font-size:var(--story-font);line-height:2.13;letter-spacing:.032em;color:var(--ink);overflow-wrap:break-word}
+    .prose p {text-indent:2em;margin:0 0 1.18em}
+    .prose p.noindent {text-indent:0}
+    .prose .dialogue {margin:1.25em 0;text-indent:2em}
+    .prose em {font-style:normal;color:var(--gold)}
+    .prose .impact {text-align:center;text-indent:0;color:var(--gold);font-size:1.06em;letter-spacing:.15em;margin:2em 0}
+    .breakmark {display:block;margin:36px auto 37px;text-align:center;color:var(--gold-soft);letter-spacing:.6em;font-size:15px}
+    .chapter-next {display:flex;justify-content:flex-end;margin:35px 0 0;font:13px system-ui,"PingFang TC",sans-serif}
+    .chapter-next a {text-decoration:none;color:var(--teal);border-bottom:1px solid var(--line);padding:9px 0}
+    .chapter-next a:hover {color:var(--gold)}
+    .endcap {text-align:center;padding:36px 10px 62px}
+    .end-seal {width:95px;height:95px;border:1px solid var(--gold-soft);border-radius:50%;margin:0 auto 24px;display:grid;place-items:center;position:relative;color:var(--gold);font-size:32px}
+    .end-seal:after {content:"";position:absolute;inset:6px;border:1px solid var(--line);border-radius:50%}
+    .endcap h3 {font-size:24px;font-weight:500;letter-spacing:.25em;margin:15px 0}
+    .endcap p {color:var(--muted);font-size:14px;line-height:2}
+    .endcap .top-return {display:inline-block;text-decoration:none;border:1px solid var(--line);padding:12px 26px;margin-top:15px;color:var(--gold);font:13px system-ui,"PingFang TC",sans-serif;letter-spacing:.12em}
+    footer {border-top:1px solid var(--line);padding:29px 20px 40px;text-align:center;color:var(--dim);font:12px/1.8 system-ui,"PingFang TC",sans-serif;letter-spacing:.1em}
+    .toast {position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(18px);background:var(--paper-2);border:1px solid var(--line);box-shadow:0 12px 30px var(--shadow);color:var(--ink);padding:12px 20px;font:13px system-ui,"PingFang TC",sans-serif;opacity:0;pointer-events:none;transition:transform .25s,opacity .25s;z-index:50;white-space:nowrap;border-radius:4px}
+    .toast.show {transform:translateX(-50%) translateY(0);opacity:1}
+    .mobile-menu {display:none}
+    .mobile-panel {display:none}
+    @media(max-width:950px) {
+      .main-layout {display:block;max-width:760px;padding-top:44px}
+      .sidebar {display:none}
+      .mobile-menu {display:block}
+      .mobile-panel {display:none;position:fixed;z-index:55;top:64px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:14px 24px 25px;max-height:75vh;overflow:auto;box-shadow:0 15px 35px var(--shadow)}
+      .mobile-panel.open {display:block}
+      .mobile-panel .toc {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:0;gap:2px}
+      .mobile-panel .toc a {margin:0;border-left:2px solid transparent}
+      .mobile-panel .toc a.active {border-left-color:var(--gold)}
+    }
+    @media(max-width:560px) {
+      .topbar {padding:0 12px;height:59px}
+      .progress {top:59px}
+      .brandtxt {letter-spacing:.06em;font-size:13px}
+      .brand {gap:8px}
+      .brandmark {height:24px;width:24px;font-size:16px}
+      .navtools {gap:1px}
+      .tool {min-width:31px;height:31px;padding:0 6px;font-size:12px}
+      .tool.bookmark-save {display:none}
+      .separator {margin:0 1px}
+      .hero {min-height:510px;padding:64px 17px 75px}
+      h1 {letter-spacing:.13em;font-size:clamp(53px,14vw,75px)}
+      .hero-blurb {font-size:13px}
+      .eyebrow {letter-spacing:.16em;font-size:11px}
+      .eyebrow:before,.eyebrow:after {width:22px}
+      .hero-tags {gap:6px}
+      .hero-tags span {padding:7px 10px;font-size:10px}
+      .main-layout {padding:41px 22px 50px}
+      .chapter {padding-bottom:35px;margin-bottom:39px}
+      .prose {line-height:2.07;letter-spacing:.012em}
+      h2 {margin-bottom:23px}
+      .mobile-panel {top:59px}
+      .mobile-panel .toc {grid-template-columns:1fr}
+      .opening {padding-bottom:34px;margin-bottom:35px}
+    }
+    @media(prefers-reduced-motion:reduce) {html {scroll-behavior:auto}* {transition:none !important}}
+    @media print {
+      :root {--bg:white;--paper:white;--ink:#111;--muted:#444;--line:#ddd;--gold:#73532b}
+      body {background:#fff;color:#111}
+      .topbar,.progress,.sidebar,.mobile-panel,.chapter-next,.start,.top-return {display:none !important}
+      .hero {min-height:auto;padding:60px 20px;background:none !important;color:#111;page-break-after:always}
+      .hero * {color:#111 !important;text-shadow:none}
+      .hero:before,.moon,.mountain {display:none}
+      .main-layout {display:block;padding:0;max-width:100%}
+      .book {max-width:720px;margin:auto}
+      .chapter {page-break-before:always;border-bottom:0}
+      .prose {font-size:14pt}
+    }
+  </style>
+</head>
+<body>
+<div class="topline"></div>
+<header class="topbar" id="top">
+  <a class="brand" href="#home" aria-label="回到封面"><span class="brandmark"><span>狐</span></span><span class="brandtxt">神狐天尊 · 全本完結</span></a>
+  <div class="navtools">
+    <button class="tool mobile-menu" id="tocToggle" aria-label="開啟章節目錄" aria-expanded="false">☷ 目錄</button>
+    <button class="tool" id="fontMinus" title="縮小字體" aria-label="縮小字體">A−</button>
+    <button class="tool" id="fontPlus" title="放大字體" aria-label="放大字體">A＋</button>
+    <span class="separator" aria-hidden="true"></span>
+    <button class="tool" id="themeToggle" title="切換明暗主題" aria-label="切換明暗主題">☼</button>
+    <button class="tool bookmark-save" id="saveBookmark" title="儲存閱讀位置">◈ 書籤</button>
+    <button class="tool" id="goBookmark" title="回到上次閱讀位置" aria-label="回到書籤">↶</button>
+  </div>
+</header>
+<div class="progress" aria-hidden="true"><div class="progress-inner" id="readingProgress"></div></div>
+<nav class="mobile-panel" id="mobilePanel" aria-label="手機版章節目錄"></nav>
+<section class="hero" id="home">
+  <div class="moon"></div><div class="mountain"></div><div class="mountain two"></div>
+  <div class="hero-content">
+    <div class="eyebrow">青雲仙宗秘史 · 一卷全</div>
+    <h1>神狐天尊</h1>
+    <p class="hero-sub">狐心蝦計 · 萬劫難逃</p>
+    <p class="hero-blurb">他說自己一生光明磊落，她說自己從不負人。兩個各有道侶的修士，在夜色中結盟，以情欲為火，以謊言為梯，誣陷同門，竊取功勳，終於坐上人人敬仰的長老高位。可若整座仙門都靠謊言維繫，誰能笑到最後？</p>
+    <div class="hero-tags"><span>修仙權謀</span><span>禁忌私情</span><span>黑色諷刺</span><span>全本完結</span></div>
+    <a class="start" href="#chapter-0">入卷閱讀　↓</a>
+    <div class="edition">共十一章 · 可離線閱讀</div>
+  </div>
+</section>
+<div class="main-layout">
+<aside class="sidebar">
+  <div class="side-title">卷內章回 / CONTENTS</div>
+  <nav class="toc" id="desktopToc" aria-label="章節目錄">
+    <a href="#chapter-0">序　長老登天</a>
+    <a href="#chapter-1">一　月下有狐</a>
+    <a href="#chapter-2">二　蝦甲藏書</a>
+    <a href="#chapter-3">三　留影不留真</a>
+    <a href="#chapter-4">四　以罪邀功</a>
+    <a href="#chapter-5">五　道侶如棋</a>
+    <a href="#chapter-6">六　雙登長老位</a>
+    <a href="#chapter-7">七　斷劍照故人</a>
+    <a href="#chapter-8">八　狐蝦生隙</a>
+    <a href="#chapter-9">九　天問開碑</a>
+    <a href="#chapter-10">終　大道無情</a>
+  </nav>
+  <div class="side-foot">卷首一頁，卷末一生。<br>閱讀進度將顯示於頁頂。<br>可切換日／夜模式及文字大小。</div>
+</aside>
+<main class="book" id="book">
+  <section class="opening">
+    <div class="quote-flower">◇</div>
+    <blockquote>世人求仙，求的是長生。<br>有人求仙，求的是旁人跪著叫一聲——天尊。</blockquote>
+    <div class="byline">——《青雲野史》殘卷</div>
+  </section>
+
+  <section class="chapter" id="chapter-0">
+    <div class="chapter-num">序章 / PROLOGUE</div><h2>長老登天</h2>
+    <div class="prose">
+      <p>青雲仙宗，七月初七。</p>
+      <p>仙鶴繞峰，鐘響九重。宗門千年難得一見的雙長老晉位大典，便在這日舉行。</p>
+      <p>白玉台上，神狐一身雪衣，佩紫金令，眉宇間有不容侵犯的莊嚴。他修的是《九尾惑心訣》，世人卻都誇他道心澄明。站在他身側的草蝦，著青綃法衣，耳邊一枚細小水珠垂墜如淚，眾弟子稱她「慈悲水仙」。</p>
+      <p>掌門玄機真人親授二人長老印，聲如洪鐘：「神狐守正不阿，草蝦明辨忠奸。此後青雲賞罰，由二位共議。」</p>
+      <p>萬人伏地，齊呼長老。</p>
+      <p>草蝦在袖中悄悄勾住神狐的小指。神狐並未回頭，只將她的手輕輕按住，唇角浮起笑意。</p>
+      <p>沒有人看見，觀禮的人群最後一排，有個拄著斷劍的灰衣男子抬起頭來。他沒有跪，只盯著神狐腰間的長老令，低聲道：「三年前，你說我不配站在這裡。」</p>
+      <p>那男子叫凌天。</p>
+      <p>而這一天，他等了整整一千零九十六個日夜。</p>
+      <p class="impact">故事，要從第一場雨說起。</p>
+    </div>
+    <div class="chapter-next"><a href="#chapter-1">下一章：月下有狐　→</a></div>
+  </section>
+
+  <section class="chapter" id="chapter-1">
+    <div class="chapter-num">第一章 / 01</div><h2>月下有狐</h2>
+    <div class="prose">
+      <p>三年前，青雲仙宗尚有一個規矩：內門弟子結為道侶，須在太初殿立下同修誓，若有背棄，雖不致受刑，卻會被視作道心不穩，難登執事以上之位。</p>
+      <p>神狐與清月峰首席弟子柳清霜，便是在此殿結契。她善劍，不善言辭，曾為替他護法，獨自擋下九重天雷，左臂從此留下一道永不褪去的傷痕。</p>
+      <p>草蝦的道侶則是執法堂的蕭無塵。此人性子直得像根竹竿，一次草蝦受人欺辱，他為護她，寧願受二十道鞭刑也不肯改口說假話。那時草蝦哭著告訴他：「此生得君，便再無所求。」</p>
+      <p>偏偏兩人都忘了，修仙界最容易變的，向來不是天氣，而是誓言。</p>
+      <p>那年初春，神狐奉命教導新晉弟子幻術。草蝦來得最早，走得最晚。有次她問：「師兄，若一個人修道百年，始終只能居人之下，這道還修來作甚？」</p>
+      <p>神狐望著她，忽然笑了：「問得好。旁人修仙求長生，我修仙，要別人不敢直視我的眼睛。」</p>
+      <p>草蝦笑得彎了腰，說他狂妄。她卻在那一刻第一次發現，有人同她一樣，對清苦的正道生活毫無耐心。</p>
+      <p>自此，兩人常在後山水榭論道。論的是陰陽兩儀，說的是世間不公，至於真正做了什麼，只有門外那株三百年的桃樹知道。</p>
+      <p>一晚，雨濕紙窗，草蝦倚在神狐肩頭，輕聲問：「清霜師姐待你那樣好，你不會愧疚？」</p>
+      <p>神狐搖著摺扇：「她有她的劍道，我有我的大道。大道不同，何談辜負？」</p>
+      <p>草蝦又問：「那無塵呢？」</p>
+      <p>「他若真愛你，自當盼你成仙。若不盼，便是心胸狹窄。」</p>
+      <p>兩人對望，竟同時笑了。許多荒唐事，原本只需要一個能陪自己說荒唐話的人，便顯得理直氣壯。</p>
+      <p>翌日清晨，神狐返回住處。柳清霜正在燈下替他縫補法袍袖口。她沒有問他去了哪裡，只道：「你的外袍沾了水榭的蘭香。春寒未退，下回添件衣服。」</p>
+      <p>神狐心口微微一緊，旋即笑著答應。他那時尚不知，第一道裂縫不是從誣陷同門開始，而是從這句溫柔的謊話開始。</p>
+    </div>
+    <div class="chapter-next"><a href="#chapter-2">下一章：蝦甲藏書　→</a></div>
+  </section>
+
+  <section class="chapter" id="chapter-2">
+    <div class="chapter-num">第二章 / 02</div><h2>蝦甲藏書</h2>
+    <div class="prose">
+      <p>青雲仙宗每百年改選九席長老。能得席者，除修為外，尚須累積三件護宗大功，並通過執法堂驗證。</p>
+      <p>神狐修為已到元嬰，草蝦亦是金丹圓滿，偏偏兩人名下功勳寥寥。長老之位本輪不到他們。</p>
+      <p>「缺功勳，便去立功。」神狐說。</p>
+      <p>「立功太慢。」草蝦正在剝一枚靈果，指尖晶瑩，語氣平淡，「不如先叫別人犯錯。」</p>
+      <p>神狐一怔，繼而撫掌大笑。</p>
+      <p>草蝦本是水族散修出身，初入青雲時，曾被一些世家弟子笑作「河溝裡爬出來的草蝦」。她把那些名字一一記在蝦甲內側，記了十年。受過輕賤不會必然使人善良，有時只會使人學會，更精準地輕賤別人。</p>
+      <p>她摸熟了藏經閣、寶庫與執法堂的輪值規矩，還知道每逢子夜，鎮宗靈寶「定魂燈」會短暫離開護陣，交由巡燈弟子添油。</p>
+      <p>而神狐的《九尾惑心訣》，恰好能模仿修士留下的靈息；草蝦的「逆鱗水印」，則能將附著在物上的真實氣機洗去。兩術分開都只算旁門，合在一處，卻能做出最漂亮的假證。</p>
+      <p>神狐挑選的第一個獵物，是天劍峰的凌天。</p>
+      <p>凌天出身寒門，十七歲入內門，二十三歲悟出劍意，幾乎是這一代公認最有望成為長老的弟子。他唯一的毛病，是見人說人話，見鬼也敢問鬼為何不投胎。</p>
+      <p>不久前，他曾在講道台上質問神狐：「師兄的惑心幻術，若用來迷惑本門弟子，與魔道有何分別？」</p>
+      <p>神狐當場笑道：「師弟提醒得好，本尊必當自省。」</p>
+      <p>下了講道台，他卻在冊子上寫下一個名字：凌天。</p>
+      <p>「何不選個沒背景的？」草蝦問。</p>
+      <p>「正因他人人看重，扳倒他才叫大功。」神狐用扇尖點著那兩字，「況且一個好人若被證明是壞人，大家只會更加相信揭發他的人。」</p>
+      <p>草蝦想了想，點頭：「師兄所言，實在深得人心。」</p>
+      <p>這是他們第一次把惡念寫成計畫。墨跡尚未乾透，兩人已開始討論獲賞後，該把洞府搬去哪座靈脈。</p>
+    </div>
+    <div class="chapter-next"><a href="#chapter-3">下一章：留影不留真　→</a></div>
+  </section>
+
+  <section class="chapter" id="chapter-3">
+    <div class="chapter-num">第三章 / 03</div><h2>留影不留真</h2>
+    <div class="prose">
+      <p>子時三刻，定魂燈失竊。</p>
+      <p>第二日清晨，山門封鎖，七十二道飛劍盤旋天際。神狐領著草蝦闖進執法殿，兩人衣衫不整，滿身塵土，像極了追捕賊人直到天亮的忠臣。</p>
+      <p>草蝦眼中含淚，顫聲說：「昨夜我親眼見凌天師兄潛入寶庫。他發現我之後，還說若敢聲張，便要將我沉入萬丈寒潭。」</p>
+      <p>掌門沉聲問：「可有證據？」</p>
+      <p>神狐當即呈上一枚留影石。石內果然映出凌天持燈越牆的身形，連衣袍上的破角都一模一樣。</p>
+      <p>凌天被帶到堂上，聽完只說了一句：「假的。」</p>
+      <p>掌門問他如何證明。</p>
+      <p>「定魂燈是我師父親手供奉的。若我要偷，何必穿著天劍峰弟子人人認得的衣裳，還偏偏從有留影陣的東牆走？」</p>
+      <p>神狐立刻嘆氣：「師弟，聰明人行事，自然懂得虛實相生。你把破綻做得越多，豈非越容易狡辯？」</p>
+      <p>這話有如一張無形的網。凌天若做得隱密，是心思縝密；若留下破綻，也是故佈疑陣。無論如何辯解，都成了罪證。</p>
+      <p>蕭無塵時任執法堂副使。他看了三遍留影石，眉頭越皺越緊。</p>
+      <p>「我想再驗一次石中靈息。」</p>
+      <p>神狐笑意不減：「蕭師弟辦事嚴謹，自是好事。只是定魂燈一旦流入魔修之手，片刻也耽擱不得。」</p>
+      <p>草蝦忽然掩面啜泣：「無塵，連你也不相信我嗎？」</p>
+      <p>眾人都望向蕭無塵。他看著相伴多年的道侶，終究放下驗石的玉盤，只說：「此案需從長計議。」</p>
+      <p>可是「從長計議」四字還未落地，長老團已以六比三裁定凌天有罪。宗門廢了他的劍骨，將他逐出青雲，限三日內離山。</p>
+      <p>凌天臨走前望向神狐，忽然笑了：「你最好祈禱，這顆石頭能騙一輩子。」</p>
+      <p>神狐搖扇：「被逐之人，還敢危言聳聽。」</p>
+      <p>他沒有發現，當留影石被放回證物架時，一道極淡的銀色水紋在石角閃了一下，像蝦殼上落下的月光。</p>
+      <p>而替證物造冊的盲眼老吏何掌燈，正用指尖摸過那道水紋，沒有說話。</p>
+    </div>
+    <div class="chapter-next"><a href="#chapter-4">下一章：以罪邀功　→</a></div>
+  </section>
+
+  <section class="chapter" id="chapter-4">
+    <div class="chapter-num">第四章 / 04</div><h2>以罪邀功</h2>
+    <div class="prose">
+      <p>三月後，定魂燈在魔修棄置的荒洞中被「尋回」。神狐稱自己追蹤靈息千里，草蝦說自己以命阻擋邪修。兩人各記護宗一功。</p>
+      <p>真相則簡單得令人發笑：燈一直藏在草蝦的本命水府裡。她怕丟了靈寶會受責，甚至每日親自為它添油。</p>
+      <p>有了第一樁，第二樁便容易許多。</p>
+      <p>丹峰首席梁渡不願把珍貴的續命丹低價售給神狐，三日後，丹庫便查出一批偽造的領藥文書。文書上有梁渡的手印，有他的筆跡，還有一串恰好通往魔市的賬冊。</p>
+      <p>梁渡喊冤，草蝦輕聲勸他：「梁師兄，你若認了，還能保住一身修為。」</p>
+      <p>「我沒做，何以認？」</p>
+      <p>「因為不認，大家會更難過呀。」</p>
+      <p>那天梁渡在刑堂跪到日落，最後被判閉關禁足二十年。禁足前，他將祖母留下的藥方交給一名小藥童，說：「往後別輕易信誰替你說話。看他替你說完以後，拿走了什麼。」</p>
+      <p>第三樁，是北峰弟子私通魔道。第四樁，是靈田執事侵吞靈石。每回有人出事，神狐與草蝦總能比誰都早找到線索；每回有人倒下，兩人的名字便在功勳榜上升一格。</p>
+      <p>甚至有人在山門外立起一塊石碑，上刻「狐公無私，蝦仙有德」。</p>
+      <p>草蝦見了碑，感動得眼眶泛紅。當晚她把碑文拓下，珍而重之掛在神狐私室，說將來要讓後世弟子知道，他們曾如何艱難地守護宗門。</p>
+      <p>神狐問她：「不怕有朝一日敗露？」</p>
+      <p>草蝦望著山下燈火：「一個人說我們清白，未必有人信。一千個人這樣說，便是宗門公論。待我們成了長老，連證據該怎麼寫，都由我們說了算。」</p>
+      <p>神狐第一次覺得，眼前的小師妹不是偶然與自己相遇的紅顏，而是一把與自己形狀相同的刀。</p>
+      <p>他們開始不只在夜裡私會，也在白日堂而皇之並肩出入。旁人若多看兩眼，神狐便說那是「護宗同道，清者自清」。眾人於是先替他們覺得委屈，再替他們責罵閒言碎語者。</p>
+      <p>謊言走到這一步，已不需要主人日日餵養。整座山門，開始自發替它守夜。</p>
+    </div>
+    <div class="chapter-next"><a href="#chapter-5">下一章：道侶如棋　→</a></div>
+  </section>
+
+  <section class="chapter" id="chapter-5">
+    <div class="chapter-num">第五章 / 05</div><h2>道侶如棋</h2>
+    <div class="prose">
+      <p>先察覺異樣的是柳清霜。</p>
+      <p>她練劍，分得清靈氣細微的高低；自然也分得清神狐法袍上那股從未散去的水府香氣。她沒有吵鬧，只取出當年結契時的一對同心玉，放在桌上。</p>
+      <p>「你若想走，直接說。」</p>
+      <p>神狐抬起眼：「清霜，你修為停滯，便疑我變心？我們都是修士，何必有凡夫俗子的猜忌？」</p>
+      <p>柳清霜靜靜看他：「我問的不是大道，是你。」</p>
+      <p>神狐沉默片刻，忽然握住她的手：「宗門近期魔患未平，我每日奔走，心神早已疲倦。你是我最信任的人，不該在這時添亂。」</p>
+      <p>她終於抽回手，將同心玉收起。那晚，她沒有落淚，只在劍室裡坐了很久，直到一輪月亮從窗前移到窗後。</p>
+      <p>另一頭，蕭無塵已查出留影石曾被水印術浸染。這不是巧合；青雲宗懂此術的人不到五個，其中一人便是草蝦。</p>
+      <p>他拿著證物拓印去問她。草蝦先是哭，接著怒，最後滿面悲戚：「你寧信一塊冷石頭，也不肯信陪你過了百年的我？」</p>
+      <p>「我相信你，所以才來問。」</p>
+      <p>「那就別問。」</p>
+      <p>蕭無塵放下拓印，第一次覺得眼前的人無比陌生。</p>
+      <p>草蝦連夜去找神狐。神狐只聽了半句，便道：「他不能留在執法堂。」</p>
+      <p>次日，蕭無塵的巡夜令中被搜出一封「勾結魔修」的密信。字跡是他的，封泥是他的，連寄信靈鴉也被一一指出。神狐親自出面請命，主張依法審查。</p>
+      <p>蕭無塵望著站在證人席的草蝦，聲音沙啞：「你知道這不是我做的。」</p>
+      <p>草蝦咬住嘴唇，輕輕說：「無塵，認罪吧。我會替你求情。」</p>
+      <p>那一瞬，他明白了比被誣陷更難受的事：你最熟悉的人，知道你無辜，卻仍希望你低頭，讓她的謊言活下去。</p>
+      <p>他拒不認罪，被奪執法令，流放黑風礦三十年。</p>
+      <p>神狐則以「柳清霜練劍走火入魔，須入寒月洞靜修」為名，將她暫時隔絕於人前。他親自送來上好藥丹，在洞外柔聲說：「待我安定宗務，便接你出來。」</p>
+      <p>柳清霜隔著石門回答：「你若真為我好，就別再說這種話。」</p>
+      <p>神狐腳步一頓，又很快走了。他覺得自己的安排十分周全：沒有殺一個人，卻讓所有可能指認他的人，都失去了說話的地方。</p>
+      <p class="impact">他把這叫作仁慈。</p>
+    </div>
+    <div class="chapter-next"><a href="#chapter-6">下一章：雙登長老位　→</a></div>
+  </section>
+
+  <section class="chapter" id="chapter-6">
+    <div class="chapter-num">第六章 / 06</div><h2>雙登長老位</h2>
+    <div class="prose">
+      <p>又過了一年，青雲仙宗的功勳冊終於寫滿了兩個名字。</p>
+      <p>神狐擒魔三次，護寶兩次，剷除奸細四人；草蝦善斷疑獄，調停宗務，屢救門人。兩人聯名提出改革執法堂：設「明鑑司」，專司審查可疑弟子，而所有卷宗須經兩位新任長老蓋印。</p>
+      <p>宗門元老們覺得此策甚妙。畢竟，誰也不想再見到凌天那樣的叛徒、梁渡那樣的貪墨者。</p>
+      <p>晉位大典上，掌門將兩枚長老印交到他們掌中。神狐看見底下萬人叩首，忽然想起自己初入仙門時，曾被守山的老弟子呵斥「小狐狸，不准亂闖」。</p>
+      <p>如今輪到別人求他開門。</p>
+      <p>草蝦也望見石階下那些曾嘲笑她出身的世家弟子。他們低眉垂首，甚至有人搶著稱讚她的水族血脈高貴。她笑得柔和，胸中卻生出一種比復仇更甜的滿足：原來旁人不是真心尊敬自己，也足夠令人快樂。</p>
+      <p>當晚，兩人在新建的棲霞殿相會。廊外雲海翻湧，殿內靈燈如晝。</p>
+      <p>「師兄，這就是你說的天尊之路？」</p>
+      <p>神狐展開摺扇，扇上新題四字：<em>天狐無罪</em>。</p>
+      <p>「不過才長老。」他笑道，「待掌門閉關，宗門便再無人能壓我。」</p>
+      <p>草蝦替他斟酒，眼神閃爍：「那我呢？」</p>
+      <p>「你自然與我並肩。」</p>
+      <p>「若有一日，我也想坐掌門的位置呢？」</p>
+      <p>神狐手中摺扇停了一瞬，旋即將她攬入懷裡：「傻師妹，你我的大道，從來是一條。」</p>
+      <p>兩人笑著飲盡合歡酒。那一刻，彼此都沒有說出口的是：一條路，走到最窄處，容不下兩個人。</p>
+      <span class="breakmark">＊　＊　＊</span>
+      <p>新規施行後，青雲宗比從前安靜了。弟子不敢夜遊，不敢議事，不敢問長老的裁決是否有誤。曾經爭論百年的道法學會，現在連講道台上的問題都要先呈交明鑑司審閱。</p>
+      <p>掌門以為這是清明之治。神狐說：「心無邪念，自然不懼審查。」草蝦說：「只要人人忠誠，就不會有人受冤。」</p>
+      <p>山中的人一日比一日恭順。山外流放的、禁足的、失去師友的人，卻一日比一日多。</p>
+      <p>神狐不在乎。因為自從他坐上那張椅子，再也沒有人敢在他的面前說「假的」。</p>
+    </div>
+    <div class="chapter-next"><a href="#chapter-7">下一章：斷劍照故人　→</a></div>
+  </section>
+
+  <section class="chapter" id="chapter-7">
+    <div class="chapter-num">第七章 / 07</div><h2>斷劍照故人</h2>
+    <div class="prose">
+      <p>凌天離開青雲後，沒有立刻投身魔道，也沒有得遇神秘仙帝傳功。他斷了劍骨，修為散盡，先在山腳替人打鐵，替過路旅人磨劍，一日只賺得半枚下品靈石。</p>
+      <p>一年後，一個瞎眼老頭找到他的鐵鋪。</p>
+      <p>那人正是何掌燈。青雲祖訓規定，每一宗重大案件，留影石都須留下一枚「背拓」，封於天問碑下。此物不錄人影，只錄證物曾受哪些法術觸碰；縱使原石被洗去氣機，背拓仍會留下先後順序。</p>
+      <p>何掌燈當年摸到那道銀色水紋，就知道留影石有假。他卻畏懼長老團，不敢說破；等他鼓起勇氣調卷時，證物已被明鑑司接管。</p>
+      <p>「我守了九十年卷宗，沒守住一個活人。」老吏說，「如今來得遲了，你還願聽嗎？」</p>
+      <p>凌天放下鐵錘：「你有證據？」</p>
+      <p>「有一半。剩下一半，還在他們手裡。」</p>
+      <p>兩人遂去黑風礦尋蕭無塵。蕭無塵早失去執法令，右手又被礦煞侵蝕，卻仍將當年偷藏的水印拓片縫在衣裡。他知道自己曾為草蝦放棄驗證，是那樁冤案得以成立的原因之一。</p>
+      <p>「我若早些堅持，或許你不必被廢。」他對凌天說。</p>
+      <p>凌天沒有說原諒，只回：「那現在就別再退。」</p>
+      <p>三人再尋柳清霜。她早已靠劍氣磨開寒月洞後方石壁，離開宗門，隱居於荒嶺。她手中有一份神狐練習擬息之術的殘卷，紙上記著凌天靈息的細節，落款正是定魂燈失竊前七日。</p>
+      <p>何掌燈翻出祖宗律令：「天問碑只在長老續誓當日開啟。若有三件獨立物證與兩名具名證人，便可越過明鑑司，直請諸峰公議。」</p>
+      <p>四人對坐一夜，沒有一人提及報仇的快意。他們討論的是證據如何保存，證人若被抓該怎麼辦，以及即使證明了凌天無辜，被廢的劍骨也不會重新長回來。</p>
+      <p>天將亮時，柳清霜問：「若公議仍不信我們？」</p>
+      <p>凌天握住那把斷劍：「至少這一次，不能再讓他們替我們說話。」</p>
+      <p>遠處山鐘響起，提醒所有人：距離兩位新長老續誓，還有七日。</p>
+    </div>
+    <div class="chapter-next"><a href="#chapter-8">下一章：狐蝦生隙　→</a></div>
+  </section>
+
+  <section class="chapter" id="chapter-8">
+    <div class="chapter-num">第八章 / 08</div><h2>狐蝦生隙</h2>
+    <div class="prose">
+      <p>七日未至，裂縫先到了。</p>
+      <p>草蝦偶然讀到一份密令。神狐已私下向掌門提議，增設「首席監宗」一職，可統轄明鑑司及諸峰刑獄；人選唯神狐一人。草蝦原以為雙掌印是平起平坐，卻發現自己的名字只被寫在附議欄。</p>
+      <p>她問神狐：「我們不是說好，共掌青雲？」</p>
+      <p>神狐依舊搖扇：「你善人情，我善大局。何必計較名分？」</p>
+      <p>「名分？」草蝦冷笑，「我替你洗的留影石、替你寫的證詞、替你哄住的蕭無塵，在你眼裡都不算功勞？」</p>
+      <p>神狐收起笑容：「師妹，小聲些。」</p>
+      <p>這句話比任何斥責都叫草蝦憤怒。從前她受盡他人輕蔑，如今最不願聽的，便是同謀也把她當作隨手可棄的幫手。</p>
+      <p>當夜，她悄悄複製了明鑑司卷庫裡所有涉及神狐的密檔，藏入一枚不起眼的蝦甲珠。珠裡還存著他們相會時留下的傳音：那些曾被她當作情話珍藏的「你我一體」，如今成了能使兩人同時身敗名裂的刀。</p>
+      <p>神狐同樣不蠢。他察覺卷庫封印被觸動，第二天便交代心腹，若草蝦有異，立刻散出「水族妖女蠱惑神狐」的說法，將所有偽證歸罪於她一人。</p>
+      <p>兩人又在棲霞殿共飲一壺酒。</p>
+      <p>草蝦問：「師兄，你還信我嗎？」</p>
+      <p>神狐答：「自然。」</p>
+      <p>神狐問：「師妹，你可願為我赴死？」</p>
+      <p>草蝦笑答：「甘之如飴。」</p>
+      <p>兩人笑得比初識時還溫柔，袖中卻都各握著一張防身的殺符。</p>
+      <p>窗外桃花被夜雨打落。當年那株老桃樹又開了花，卻沒有一朵能落進殿內。</p>
+    </div>
+    <div class="chapter-next"><a href="#chapter-9">下一章：天問開碑　→</a></div>
+  </section>
+
+  <section class="chapter" id="chapter-9">
+    <div class="chapter-num">第九章 / 09</div><h2>天問開碑</h2>
+    <div class="prose">
+      <p>續誓日，青雲主峰萬人列席。</p>
+      <p>神狐第一個走上天問台。他將右掌覆在古碑上，朗聲誦出祖訓：「凡掌刑賞者，不以私欲斷人，不以偽證害人。若有違背，願受宗門公議。」</p>
+      <p>碑文亮起微光。草蝦跟著立誓，聲音清越，聽不出半點顫抖。</p>
+      <p>儀式將畢，階下忽然有人喊：「按祖制，弟子凌天，請開三證公議！」</p>
+      <p>人群驟然分開。凌天持斷劍而來，身旁是蕭無塵、柳清霜與盲眼的何掌燈。</p>
+      <p>神狐眼底寒意一閃，隨即沉聲道：「被逐之人擅闖宗門，護衛何在？」</p>
+      <p>何掌燈抬起一卷泛黃律令：「青雲祖制第一百七十二條，公議不問原告身分。三物證、兩具名證人齊全，長老不得拒聽。」</p>
+      <p>掌門皺眉，命弟子查驗。第一份是定魂燈案的背拓，清楚錄著留影石先受幻狐火擬息，後受逆鱗水印洗痕；第二份是蕭無塵保下的水印拓片；第三份則是柳清霜藏起的擬息殘卷。</p>
+      <p>何掌燈、蕭無塵與柳清霜依序具名作證。三人所知不同，卻恰好拼成同一樁計謀。天問碑上的舊式驗印陣應聲啟動，將背拓、拓片和殘卷的時間次序一一映在半空。</p>
+      <p>所有弟子都看見：凌天遭控七日前，神狐便在練習模仿他的靈息。</p>
+      <p>掌門面色慘白：「神狐，你有何解釋？」</p>
+      <p>神狐先說殘卷被人偷用，再說水印之術天下皆知，最後忽然指向草蝦：「都是她！本座見她孤苦，才時時照拂。不料此女心懷叵測，竟將我一片善意利用至此！」</p>
+      <p>台下譁然。</p>
+      <p>草蝦望著他，竟笑了。她笑得眼淚都流了下來。</p>
+      <p>「好一個一片善意。」她從袖中取出蝦甲珠，將靈力灌入其中。無數道傳音在空中接連響起——神狐教她如何挑選替罪之人，如何以揭發換功勳，甚至如何預備在事敗時，將一切推給她。</p>
+      <p>「師妹，若有朝一日……」第一道傳音還溫柔得像情書。</p>
+      <p>「……你必須替本尊擔下此案。」最後一道卻冷得像冰。</p>
+      <p>神狐臉色鐵青，驟然出手搶珠。他幻化九尾，狐火燒遍天問台，意圖毀去所有物證。</p>
+      <p>凌天迎了上去。</p>
+      <p>他的劍骨仍是斷的，靈力遠不如昔日，這一劍既不驚天，也不動地。他只以最尋常的凡鐵劍斬向神狐手腕，逼得那團狐火偏離半寸。</p>
+      <p>就是這半寸，讓柳清霜的清月劍光落下，斬斷了神狐與天問碑之間的控制法陣；蕭無塵則以尚存的一隻左手，將四周執法鎖陣重新接上。</p>
+      <p>草蝦乘隙退後，卻被自己設下的護宗水網困住。她昔年為防「罪徒」逃脫，親手設計此陣，只認長老印中的刑獄權限。如今印令被公議暫封，陣法不認主人，竟也不認她。</p>
+      <p>兩人同時跌落台上，一個困於劍光，一個困於水牢。</p>
+      <p>沒有天雷替天行道，也沒有仙人從雲端降臨。只是一群曾經沉默的人，終於沒有再把證物放回抽屜裡。</p>
+    </div>
+    <div class="chapter-next"><a href="#chapter-10">下一章：大道無情　→</a></div>
+  </section>
+
+  <section class="chapter" id="chapter-10">
+    <div class="chapter-num">終章 / FINALE</div><h2>大道無情</h2>
+    <div class="prose">
+      <p>公議持續了十九日。</p>
+      <p>更多封存的卷宗被取出，更多曾經不敢出聲的人走上天問台。梁渡帶著那名小藥童送來丹庫原始賬冊；北峰弟子找到了當年被迫改過的值夜名單；連幾名曾為神狐偽造證言的心腹，也終於在宗門誓律與自保之間，選擇說出真話。</p>
+      <p>掌門玄機真人坐在台上，彷彿一夜間老了百歲。諸峰長老原先都說自己受蒙蔽，後來不得不承認：留影石並非無懈可擊，當年有人提出疑點，他們卻嫌查證太慢；有人請求延審，他們卻怕宗門顏面受損。</p>
+      <p>神狐始終不肯認罪。他說自己遭草蝦蠱惑，說自己一心為宗門，說行大事者難免犧牲小節。每說一句，總有人想起他當年在講道台上高談的光明磊落。</p>
+      <p>草蝦則承認部分罪行，卻也一再說是神狐教她行事。兩人把曾經的海誓山盟翻成一頁頁供詞，今日指責，明日反駁，竟比當年配合誣陷旁人時還要默契。</p>
+      <p>第十九日，宗門宣判：撤去神狐與草蝦的長老之位，廢除明鑑司，追奪二人非法所得，封禁修為，分囚於東西兩座鎮罪塔。凌天、梁渡、蕭無塵等人的舊案逐一撤銷，受害者得以重返宗門或領取補償；涉及偽證與枉判的長老，也須各自受審。</p>
+      <p>宣判之時，草蝦忽然問：「我曾立過的功，有些是真的。難道一筆都不算？」</p>
+      <p>柳清霜站起來，回答她：「真的功，不會抹去；假的罪，也不能因真的功就變成真的。」</p>
+      <p>草蝦張了張嘴，終究無話。</p>
+      <span class="breakmark">＊　＊　＊</span>
+      <p>神狐被押往東塔的那天，天降大雪。</p>
+      <p>他在山道上遇見蕭無塵。曾經清俊的執法弟子如今滿頭霜白，右手殘廢，卻穿回了自己洗淨的執法袍。</p>
+      <p>神狐不甘地問：「你們贏了，又能如何？凌天的劍骨回得來嗎？你的三十年回得來嗎？」</p>
+      <p>蕭無塵答：「回不來。」</p>
+      <p>神狐像抓住什麼勝利似的笑了。</p>
+      <p>「所以，這一切有何意義？」</p>
+      <p>「正因回不來，往後才不能再有第二個凌天。」蕭無塵說完，轉身下山，沒有再看他。</p>
+      <p>草蝦被囚西塔。她曾在獄中托人送信給神狐，信上只有一句：「師兄，你可曾真的愛過我？」</p>
+      <p>神狐看完，提筆回覆：「若當年你不私藏傳音珠，今日我們仍是長老。」</p>
+      <p>草蝦收信後靜坐良久，最後把那張紙折成一隻小船，放進塔角滴水的石盆裡。紙船浸濕、沉沒，沒有駛向任何地方。</p>
+      <p>從此兩人再未通信。</p>
+      <span class="breakmark">＊　＊　＊</span>
+      <p>十年後，青雲仙宗的山門前多了一塊新碑。上面不是長老功勳，也不是宗門禁令，而是三條簡單的文字：凡涉刑獄，證物應有複核；凡涉權貴，公議不得拒絕；凡受冤屈，平反不得止於還其清白。</p>
+      <p>凌天沒有恢復劍骨。他選擇留在山腳開鐵鋪，替初入仙門的孩子磨劍。偶爾有人請他講一講當年斬斷九尾狐火的那一劍，他總說：「不是我一個人斬的。」</p>
+      <p>柳清霜離了青雲，去往更遠的北境。她把那對同心玉放在舊石橋上，既不摔碎，也不帶走。後來有旅人拾得，覺得玉色好看，便拿去換了兩碗熱湯。</p>
+      <p>蕭無塵重整執法堂，第一條新規便是：證人與被告無論身分，都有權要求獨立驗證。他將當年自己放下玉盤的那一天，記在堂內案冊首頁，沒有替自己遮掩。</p>
+      <p>至於神狐，偶爾仍在東塔夜半對著石牆講道，講自己如何從無名弟子走到萬人景仰，講世道不公，講若天再給一次機會，他定要掌握更大的權力。</p>
+      <p>守塔的小童有一次聽煩了，問他：「前輩，你到底修成了什麼？」</p>
+      <p>神狐挺直腰背，答得莊嚴：「本尊修成過青雲長老，天下人稱我神狐天尊。」</p>
+      <p>小童疑惑：「可我師父說，天尊是很厲害、很自由的人。」</p>
+      <p>神狐面色微變。</p>
+      <p>小童指了指門上的鐵鎖，天真地問：「那你為什麼連這扇門都出不去？」</p>
+      <p>神狐啞口無言。</p>
+      <p>窗外，一輪明月照在鐵鎖上，照在他的白髮上，也照在他當年最愛的摺扇上。扇面依稀還有四個褪色的字——天狐無罪。</p>
+      <p>他伸手想將扇子打開，卻發現扇骨早已腐朽，輕輕一碰，就碎成了灰。</p>
+      <p class="impact">大道未必無情。<br>只是有些人把無情，誤認成了大道。</p>
+    </div>
+  </section>
+
+  <section class="endcap" id="end">
+    <div class="end-seal">終</div>
+    <h3>全卷完</h3>
+    <p>人間有情，道心有價。<br>願每一份清白，都不必等到百年以後。</p>
+    <a class="top-return" href="#home">重返卷首 ↑</a>
+  </section>
+</main>
+</div>
+<footer>《神狐天尊》 · 原創仙俠小說 · 全本完結<br>本頁為獨立 HTML，可直接儲存、離線開啟與列印。</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(function(){
+  const root=document.documentElement;
+  const sections=[...document.querySelectorAll('.chapter')];
+  const desktopToc=document.getElementById('desktopToc');
+  const mobilePanel=document.getElementById('mobilePanel');
+  mobilePanel.innerHTML='<div class="side-title">章節目錄</div>'+desktopToc.outerHTML.replace('id="desktopToc"','id="mobileToc"');
+  const allToc=[...document.querySelectorAll('.toc a')];
+  const progress=document.getElementById('readingProgress');
+  const toast=document.getElementById('toast');
+  let toastTimer;
+  function notify(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2000)}
+  function getSaved(key){try{return localStorage.getItem('sht-'+key)}catch(e){return null}}
+  function setSaved(key,value){try{localStorage.setItem('sht-'+key,value);return true}catch(e){return false}}
+  let fontSize=Number(getSaved('size'))||19; fontSize=Math.min(25,Math.max(16,fontSize));root.style.setProperty('--story-font',fontSize+'px');
+  document.getElementById('fontPlus').addEventListener('click',()=>{fontSize=Math.min(25,fontSize+1);root.style.setProperty('--story-font',fontSize+'px');setSaved('size',fontSize);notify('字體大小：'+fontSize+'px')});
+  document.getElementById('fontMinus').addEventListener('click',()=>{fontSize=Math.max(16,fontSize-1);root.style.setProperty('--story-font',fontSize+'px');setSaved('size',fontSize);notify('字體大小：'+fontSize+'px')});
+  const themeToggle=document.getElementById('themeToggle');
+  const savedTheme=getSaved('theme');if(savedTheme==='light')root.dataset.theme='light';
+  function updateTheme(){const light=root.dataset.theme==='light';themeToggle.textContent=light?'☾':'☼';themeToggle.title=light?'切換夜間模式':'切換日間模式';themeToggle.setAttribute('aria-label',themeToggle.title)}updateTheme();
+  themeToggle.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='light'?'dark':'light';setSaved('theme',root.dataset.theme);updateTheme()});
+  const tocToggle=document.getElementById('tocToggle');
+  function closeMenu(){mobilePanel.classList.remove('open');tocToggle.setAttribute('aria-expanded','false')}
+  tocToggle.addEventListener('click',()=>{const isOpen=mobilePanel.classList.toggle('open');tocToggle.setAttribute('aria-expanded',String(isOpen))});
+  allToc.forEach(link=>link.addEventListener('click',closeMenu));
+  document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu()});
+  function currentChapter(){let active=sections[0];const top=window.scrollY+Math.min(190,window.innerHeight*.33);for(const sec of sections){if(sec.offsetTop<=top)active=sec;else break}return active}
+  function renderScroll(){const doc=document.documentElement;const max=Math.max(1,doc.scrollHeight-window.innerHeight);progress.style.width=(100*window.scrollY/max).toFixed(2)+'%';let id=currentChapter().id;allToc.forEach(link=>{const isActive=link.getAttribute('href')==='#'+id;link.classList.toggle('active',isActive);if(isActive)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current')})}
+  let ticking=false;window.addEventListener('scroll',()=>{if(!ticking){window.requestAnimationFrame(()=>{renderScroll();ticking=false});ticking=true}},{passive:true});window.addEventListener('resize',renderScroll);renderScroll();
+  document.getElementById('saveBookmark').addEventListener('click',()=>{if(setSaved('bookmark',JSON.stringify({chapter:currentChapter().id,y:window.scrollY})))notify('已儲存閱讀書籤');else notify('此瀏覽器無法儲存書籤')});
+  document.getElementById('goBookmark').addEventListener('click',()=>{try{const saved=JSON.parse(getSaved('bookmark')||'null');if(saved&&Number.isFinite(saved.y)){window.scrollTo({top:saved.y,behavior:'smooth'});notify('已返回上次儲存的位置')}else notify('尚未儲存書籤')}catch(e){notify('尚未儲存書籤')}});
+})();
+</script>
+</body>
+</html>
