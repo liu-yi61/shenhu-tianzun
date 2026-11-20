@@ -15,6 +15,7 @@ CHAPTERS_DIR = ROOT / "content" / "chapters"
 SITE_DIR = ROOT / "site"
 DATA_DIR = ROOT / "data"
 DIST_DIR = ROOT / "dist"
+MIN_CHAPTER_LENGTH = 2800
 
 
 def parse_frontmatter(raw: str, source: Path) -> tuple[dict[str, str], str]:
@@ -91,6 +92,10 @@ def load_chapters() -> list[dict]:
             if required not in metadata:
                 raise ValueError(f"{path}: 缺少必要欄位 {required}")
         search_text = f"{metadata['title']} {plain_text(markdown)}"
+        if len(plain_text(markdown)) < MIN_CHAPTER_LENGTH:
+            raise ValueError(
+                f"{path}: 正文僅 {len(plain_text(markdown))} 字，正式章節至少需要 {MIN_CHAPTER_LENGTH} 字"
+            )
         chapters.append(
             {
                 "number": int(metadata["number"]),

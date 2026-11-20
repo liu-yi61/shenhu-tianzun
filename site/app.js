@@ -146,7 +146,10 @@ function renderReader(chapterNumber) {
 
 function renderCharacters() {
   const cards = siteData.characters.length
-    ? siteData.characters.map((character) => `<article class="character-card"><p class="eyebrow">${escapeHtml(character.role || "人物")}</p><h2>${escapeHtml(character.name)}</h2><p>${escapeHtml(character.summary || "設定待補")}</p></article>`).join("")
+    ? siteData.characters.map((character) => `<article class="character-card">
+        <img src="${escapeHtml(character.portrait || "")}" alt="${escapeHtml(character.name)}人物畫像" loading="lazy" />
+        <div class="character-copy"><p class="eyebrow">${escapeHtml(character.role || "人物")}</p><h2>${escapeHtml(character.name)}</h2><p>${escapeHtml(character.summary || "設定待補")}</p></div>
+      </article>`).join("")
     : `<div class="empty-state"><strong>人物誌尚待作者題名</strong><span>在 data/characters.json 新增資料後，人物卡片會自動出現；網站不預設故事角色。</span></div>`;
   app.innerHTML = `
     <section class="page-shell">
