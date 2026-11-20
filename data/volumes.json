@@ -1,0 +1,30 @@
+[
+  {
+    "number": 1,
+    "title": "不仙同門",
+    "subtitle": "同袍如刃，並肩向天",
+    "planned_chapters": 100,
+    "cover": "assets/cover-01.jpg"
+  },
+  {
+    "number": 2,
+    "title": "狐離舊誓",
+    "subtitle": "兩心曾近，一諾漸遠",
+    "planned_chapters": 100,
+    "cover": "assets/cover-02.jpg"
+  },
+  {
+    "number": 3,
+    "title": "暗渡童心",
+    "subtitle": "秘火照影，情生禁途",
+    "planned_chapters": 100,
+    "cover": "assets/cover-03.jpg"
+  },
+  {
+    "number": 4,
+    "title": "天宇劫",
+    "subtitle": "一劍背盟，萬年成劫",
+    "planned_chapters": 100,
+    "cover": "assets/cover-04.jpg"
+  }
+]

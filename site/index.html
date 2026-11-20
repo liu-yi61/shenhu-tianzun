@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#071211" />
+    <meta name="author" content="糖加三勺" />
+    <meta
+      name="description"
+      content="《神狐天尊》官方小說閱讀網站：卷冊、章節、人物誌與全文搜尋。"
+    />
+    <title>神狐天尊｜玄墨仙宮</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=Shippori+Mincho+B1:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#app">跳至主要內容</a>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="site-header" id="site-header">
+      <a class="brand" href="#/" aria-label="神狐天尊首頁">
+        <span class="brand-seal" aria-hidden="true">狐</span>
+        <span class="brand-name">神狐天尊</span>
+      </a>
+      <nav class="main-nav" aria-label="主要導覽">
+        <a href="#/" data-nav="home">卷冊</a>
+        <a href="#/characters" data-nav="characters">人物誌</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="search-open" type="button" aria-label="搜尋全書">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+        </button>
+        <button class="icon-button" id="settings-open" type="button" aria-label="閱讀設定">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10M14 4v6M6 14v6"></path></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="app" tabindex="-1">
+      <div class="loading-screen" aria-live="polite">
+        <span class="loading-mark">玄</span>
+        <p>雲海開卷</p>
+      </div>
+    </main>
+
+    <dialog class="search-dialog" id="search-dialog">
+      <div class="dialog-topline">
+        <p class="eyebrow">SEARCH THE ARCHIVE</p>
+        <button class="icon-button" data-close="search-dialog" type="button" aria-label="關閉搜尋">×</button>
+      </div>
+      <label class="search-box">
+        <span class="sr-only">搜尋章名或內文</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+        <input id="search-input" type="search" placeholder="搜尋章名、關鍵字……" autocomplete="off" />
+      </label>
+      <div class="search-hint" id="search-hint">輸入兩個字以上，搜尋全書章節與內文。</div>
+      <div class="search-results" id="search-results"></div>
+    </dialog>
+
+    <dialog class="settings-dialog" id="settings-dialog">
+      <div class="dialog-topline">
+        <div>
+          <p class="eyebrow">READING RITUAL</p>
+          <h2>閱讀設定</h2>
+        </div>
+        <button class="icon-button" data-close="settings-dialog" type="button" aria-label="關閉設定">×</button>
+      </div>
+      <fieldset>
+        <legend>頁面模式</legend>
+        <div class="segmented" id="theme-options">
+          <button type="button" data-theme-value="dark">玄夜</button>
+          <button type="button" data-theme-value="light">宣紙</button>
+          <button type="button" data-theme-value="system">隨系統</button>
+        </div>
+      </fieldset>
+      <label class="range-row">
+        <span>字級 <output id="font-output">19px</output></span>
+        <input id="font-range" type="range" min="16" max="26" step="1" value="19" />
+      </label>
+      <label class="range-row">
+        <span>行距 <output id="line-output">1.9</output></span>
+        <input id="line-range" type="range" min="1.6" max="2.4" step="0.1" value="1.9" />
+      </label>
+      <button class="text-button reset-settings" id="reset-settings" type="button">恢復預設</button>
+    </dialog>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
